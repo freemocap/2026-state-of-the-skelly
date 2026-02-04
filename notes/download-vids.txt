@@ -1,4 +1,9 @@
-yt-dlp https://x.com/JonMatthis/status/1351531974364688385 -o first-public-post-2021-01-19.mp4
-yt-dlp https://x.com/JonMatthis/status/1417864732749582337 -o meowmaline-2021-07-21.mp4
-yt-dlp https://x.com/freemocap/status/2010845786007875659 -o recent_treadmill_vid.mp4
-yt-dlp https://x.com/freemocap/status/1579818408291749889 -o freemocap_2022-10-11_auto-blender-output.mp4
+# Twitter/X videos
+yt-dlp https://x.com/JonMatthis/status/1351531974364688385 -o "media/videos/first-public-post-2021-01-19.mp4"
+yt-dlp https://x.com/JonMatthis/status/1417864732749582337 -o "media/videos/meowmaline-2021-07-21.mp4"
+yt-dlp https://x.com/freemocap/status/2010845786007875659 -o "media/videos/recent_treadmill_vid.mp4"
+yt-dlp https://x.com/freemocap/status/1579818408291749889 -o "media/videos/freemocap_2022-10-11_auto-blender-output.mp4"
+
+# YouTube videos
+yt-dlp https://www.youtube.com/watch?v=WW_WpMcbzns -o "media/videos/purple-monkey-2022-03-11.mp4"
+yt-dlp https://www.youtube.com/watch?v=haRITKNkGQw -o "media/videos/scholl-ferret.mp4"

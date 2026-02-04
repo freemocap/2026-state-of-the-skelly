@@ -205,3 +205,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+scholl-ferret.mp4.webmmedia/videos/rough-cut-tutorial-2022-11.mp4.f313.webm.part
+media/videos/scholl-ferret.mp4.webm
+*.mp4
+*.webm
+*.webm.part

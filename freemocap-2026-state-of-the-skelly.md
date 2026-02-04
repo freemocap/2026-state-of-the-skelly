@@ -171,6 +171,23 @@ style: |
     color: var(--light-cyan);
     font-size: 0.8em;
   }
+
+  /* Watermark logo positioning - bottom right */
+  .watermark-logo {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    opacity: 0.12;
+    width: 180px;
+    height: auto;
+    z-index: 0;
+  }
+  
+  /* Ensure content stays above watermark */
+  section > *:not(.watermark-logo) {
+    position: relative;
+    z-index: 1;
+  }
 ---
 
 <!--
@@ -208,8 +225,9 @@ VIDEOS TO DOWNLOAD (use yt-dlp):
 ================================
 - first-public-post-2021-01-19.mp4    (from x.com/JonMatthis/status/1351531974364688385)
 - meowmaline-2021-07-21.mp4           (from x.com/JonMatthis/status/1417864732749582337)
-- purple-monkey-2022-03-11.mp4        (optional - can use YouTube embed)
-- rough-cut-tutorial-2022-11.mp4      (optional - can use YouTube embed)
+- purple-monkey-2022-03-11.mp4        (from youtube.com/watch?v=WW_WpMcbzns)
+- rough-cut-tutorial-2022-11.mp4      (from youtube.com/watch?v=GxKmyKdnTy0)
+- diego-fernandez-pupilometry.mp4     (from youtube.com/watch?v=haRITKNkGQw)
 - v2-announcement-2026.mp4            (from x.com/freemocap/status/2010845786007875659)
 
 TODO - FILL IN METRICS:
@@ -246,7 +264,7 @@ Search "[FILL:" in this file to find placeholders for:
 2. **Current State** — Numbers, financials, clients
 3. **Future Plans** — v2, curriculum, shop, FDA, Blender
 
-![bg right:40% contain opacity:0.15](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 
@@ -260,7 +278,7 @@ Search "[FILL:" in this file to find placeholders for:
 
 # 2017 — OpenPose Happens
 
-![bg right:25% contain opacity:0.1](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 <!-- Add local video here: openpose-ut-video.mp4 -->
 
@@ -273,7 +291,7 @@ Started at Northeastern University
 
 *One year of regular professorship before...*
 
-![bg right:25% contain opacity:0.1](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 <!-- Video options: retinal-optic-flow.mp4, trents-argp.mp4 -->
 
@@ -288,7 +306,7 @@ Started at Northeastern University
 
 *...whoops!*
 
-![bg right:25% contain opacity:0.1](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 <!-- _class: part-background -->
@@ -297,7 +315,7 @@ Started at Northeastern University
 
 > *"The Open Source community is what the scientific community pretends to be"*
 
-![bg right:25% contain opacity:0.1](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 <!-- _class: part-background -->
@@ -334,37 +352,14 @@ The purple monkey video 🐒
   <iframe 
     width="560" 
     height="315" 
-    src="https://www.youtube.com/embed/WW_WpMcbzns?start=0" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</div>
-
-
-
-
----
-<!-- _class: part-background -->
-
-# 2022 November — Rough Cut Tutorial
-
-<div class="video-container">
-  <iframe 
-    width="560" 
-    height="315" 
     src="https://www.youtube.com/embed/GxKmyKdnTy0?start=0" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
-  </iframe>
-</div>
+  </iframe></div>
 
-<div style="text-align: center; margin-top: 0.5em; font-size: 0.8em; color: var(--light-cyan);">
-  <strong>[FILL: XX,XXX]</strong> views
-</div>
+Source: https://youtube.com/watch?v=WW_WpMcbzns
 
-<!-- Change ?start=0 to desired start time in seconds -->
 
 ---
 <!-- _class: part-background -->
@@ -372,8 +367,8 @@ The purple monkey video 🐒
 # 2023 November — v1.0 Release! 🎉
 
 The first official stable release
+![bg right:50% contain](media/images/freemocap-v1-gui.png)
 
-![bg right:25% contain opacity:0.1](media/images/skelly-logo.png)
 
 ---
 <!-- _class: part-background -->
@@ -382,11 +377,11 @@ The first official stable release
 
 ### Strategy: Circle the Wagons
 
-- Worried we were growing to fast
+- Worried we were growing too fast
 - De-emphasized public posting to slow the growth curve 
 - Focused energy on Discord community
 
-![bg right:45% contain opacity:1](media/images/freemocap-github-star-history.png)
+![bg right:50% contain](media/images/freemocap-github-star-history.png)
 
 ---
 <!-- _class: part-background -->
@@ -414,6 +409,9 @@ Source: https://twitter.com/freemocap/status/2010845786007875659
 
 # By the Numbers
 
+<div style="display: flex; gap: 2em; align-items: flex-start;">
+<div style="flex: 1;">
+
 | Metric | Count |
 |--------|-------|
 | ⭐ GitHub Stars | 4,533 |
@@ -421,58 +419,58 @@ Source: https://twitter.com/freemocap/status/2010845786007875659
 | 🌐 Global Users | 10,222+ |
 | 🗺️ Countries Reached | 140 |
 
-![bg right:40% contain](freemocap-github-star-history.png)
+A field trip to Dataland:
+https://freemocap.org/data.html
 
-![bg right:40% contain](freemocap-user-dashboard.png)
+</div>
+<div style="flex: 1;">
 
-- A field trip to Dataland - https://freemocap.org/data.html
+![h:220](media/images/freemocap-github-star-history.png)
+![h:180](media/images/freemocap-user-dashboard.png)
+
+</div>
+</div>
+
 ---
 <!-- _class: part-current -->
 
 # Financials
+
 - Doing Ok
 - Will survive past the 2026 June 30 Scary Cliff
 - ...but will we thrive??
 
-![bg right:35% contain opacity:0.15](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 <!-- _class: part-current -->
 
-# Clients
+## Current Research Partners
 
-### Current Research Partners
+- **Ben Scholl** - Colorado University, Denver Anschutz Campus
+  Developmental Laser Ferrets
 
-- Ben Scholl - Colorado University, Denver Anschutz Campus   - Developmental Laser Ferrets  - 
+- **Diego Fernandez** - Cincinnati Children's Hospital Medical College
+  Mouse eye tracker and all-day Pupilometry
 
-
-- Diego Fernandez - Cincinati Children's Hospital Medical College - Mouse eye tracker and all-day Pupilometry 
 <div class="video-container">
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/watch?v=haRITKNkGQw" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+  <video src="media/videos/scholl-ferret.mp4.webm" controls style="max-height: 30vh;"></video>
 </div>
 
-
-![bg right:40% contain opacity:0.2](media/images/skelly-logo.png)
+Source: https://youtube.com/watch?v=haRITKNkGQw
 
 ---
 <!-- _class: part-current -->
 
 # Now Offering Paid Service Contracts
 
-**Knowledge is Free, Labor is unbelievable expensive** 
+**Knowledge is Free, Labor is unbelievably expensive** 
 
 Contact us for: 
 - Contract or consultant work: https://freemocap.org/services
 - Bronze/Silver/Gold/Corporate Sponsorship (a la Blender): https://opencollective.com/freemocap-foundation
 
-![bg right:35% contain opacity:0.15](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 
@@ -488,18 +486,19 @@ https://github.com/orgs/freemocap/projects/34
 
 # v2 Transition 🚀
 
-![bg right:40% contain opacity:0.15](media/images/skellycam-logo.png)
-
-- On the `/development` branches of `freemocap` and sub-skellies (see https://github.com/freemocap )
+- On the `/development` branches of `freemocap` and sub-skellies
+  (see https://github.com/freemocap )
 
 ### Release Plan
-- **Pre-Alpha** - Known busted 
-    - (My bad UI - `freemocap/freemocap-ui`)
-- **Alpha** —  Possibly working 
-    - (Pooya's good ui! https://freemocap.vercel.app)
-- **Beta** — Potentially working
-- **Full Release** — Probably working!
 
+-  **Pre-Alpha** | Known busted 
+    - Using My bad UI - `freemocap/freemocap-ui` 
+-  **Alpha** | Possibly working 
+    - Using Pooya's good UI! https://freemocap.vercel.app 
+-  **Beta** | Potentially working?
+-  **Full Release** | Probably working! 
+
+<img src="media/images/skellycam-logo.png" class="watermark-logo">
 
 ---
 <!-- _class: part-future -->
@@ -510,7 +509,7 @@ https://github.com/orgs/freemocap/projects/34
 
 (SkEP: "Skelly Enhancement Proposal")
 
-![bg right:35% contain opacity:0.15](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 <!-- _class: part-future -->
@@ -518,8 +517,10 @@ https://github.com/orgs/freemocap/projects/34
 # Documentation Overhaul, aka... 
 ### FreeMoCap University 🎓
 
-- Multi-track curriculum with micro-certificatiions
+- Multi-track curriculum with micro-certifications
 - AI Slop version available here: https://github.com/freemocap/university
+
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 <!-- _class: part-future -->
@@ -530,27 +531,35 @@ https://github.com/freemocap/skellybot
 
 <div style="display: flex; gap: 2em; align-items: center; justify-content: center; margin-top: 1em;">
   <img src="media/images/skellybot_stats_hmn25.png" style="height: 280px;">
-    <img src="media/images/skellybot-logo.png" style="height: 280px;">
+  <img src="media/images/skellybot-logo.png" style="height: 280px;">
 </div>
-
 
 ---
 <!-- _class: part-future -->
 
 # SkellyShop 🛒
 
-### Charuco Boards
+<div style="display: flex; gap: 2em; align-items: flex-start;">
+<div style="flex: 1;">
 
+### Charuco Boards
 - Available now — print-on-demand
 - Annoying, slow, expensive system, but it exists!
-![bg right:65% contain ](media/images/freemocap-cheatsheet.png)
+
 https://shop.freemocap.org
 
 ### Cameras and other hardware
-
 Coming soon!
 
-![bg right:40% contain opacity:0.2](media/images/skellycam-logo.png)
+</div>
+<div style="flex: 1;">
+
+https://freemocap.org/assets/pictures/freemocap-cheatsheet.png
+
+![h:550](media/images/freemocap-cheatsheet.png)
+
+</div>
+</div>
 
 ---
 <!-- _class: part-future -->
@@ -558,16 +567,15 @@ Coming soon!
 # FreeMoCap Validation
 
 ### Aaron's Dissertation - Defending Soon!
+
 👇 watch this space
-https://aaroncherian.github.io/freemocap_validation/ 
-https://github.com/freemocap/freemocap_validation
 
+- https://aaroncherian.github.io/freemocap_validation/ 
+- https://github.com/freemocap/freemocap_validation
 
+### FDA 510(k) Certification from there...
 
-### FDA 510(k) Certification from there... 
-
-
-![bg right:35% contain opacity:0.15](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 <!-- _class: part-future -->
@@ -584,7 +592,7 @@ https://github.com/freemocap/freemocap_validation
 
 https://github.com/freemocap/freemocap_blender_addon/issues/45
 
-![bg right:35% contain opacity:0.15](media/images/skelly-logo.png)
+<img src="media/images/skelly-logo.png" class="watermark-logo">
 
 ---
 
@@ -595,6 +603,6 @@ https://github.com/freemocap/freemocap_blender_addon/issues/45
 # Thank You!
 
 ## Questions?
-info åt freemocap.org
+info at freemocap.org
 
 🌐 freemocap.org  ·  💻 github.com/freemocap  ·  💬 discord.gg/freemocap
